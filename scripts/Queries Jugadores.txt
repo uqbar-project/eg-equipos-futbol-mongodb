@@ -1,0 +1,10 @@
+db.jugadores.aggregate([ 
+          { $unwind: "$jugadores" }, 
+          { $match: { "jugadores.nombre": {"$regex": "Casta.*"} } },
+          { $sort: { nombre: -1 } }
+   ]);
+
+
+db.jugadores.aggregate([ { $unwind: "$jugadores" }, { $match: { "nombre": {"$regex": "Casta.*"} } }, { $sort: { nombre: -1 } }]);
+
+db.jugadores.find({"jugadores.nombre": {"$regex": "Casta.*"}}).pretty();
