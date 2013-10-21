@@ -42,9 +42,6 @@ class HomeJugadoresMongoDB implements HomeJugadores {
 			println("****************************************")
 		}
 
-		// TODO: Sacar también jugadores que empiecen con
-		// NO ANDA
-		// HABRIA QUE INCORPORAR TAMBIEN COMBINACIONES
 		val nombreComienzaCon = jugadorBusqueda.nombreComienzaCon
 		if (nombreComienzaCon != null) {
 			val unwind = new BasicDBObject("$unwind", "$jugadores")

@@ -1,20 +1,20 @@
-db.jugadores.save({equipo: "Tigre", jugadores: [{nombre: "Albil, Dami·n", posicion: "Arquero"}
-, {nombre: "GarcÌa, Javier", posicion: "Arquero"}
-, {nombre: "Navarro, Nicol·s", posicion: "Arquero"}
+db.jugadores.save({equipo: "Tigre", jugadores: [{nombre: "Albil, Dami√°n", posicion: "Arquero"}
+, {nombre: "Garc√≠a, Javier", posicion: "Arquero"}
+, {nombre: "Navarro, Nicol√°s", posicion: "Arquero"}
 , {nombre: "Alvacete, Juan", posicion: "Defensor"}
 , {nombre: "Cosaro, Guillermo", posicion: "Defensor"}
-, {nombre: "DÌaz, GastÛn", posicion: "Defensor"}
+, {nombre: "D√≠az, Gast√≥n", posicion: "Defensor"}
 , {nombre: "Fideleff, Ignacio", posicion: "Defensor"}
 , {nombre: "Godoy, Erik", posicion: " Defensor"}
 , {nombre: "Moscatto, Mariano", posicion: "Defensor"}
 , {nombre: "Paparatto, Norberto", posicion: "Defensor"}
 , {nombre: "Pintos, Pablo", posicion: "Defensor"}
-, {nombre: "Silguero, Sebasti·n", posicion: "Defensor"}
+, {nombre: "Silguero, Sebasti√°n", posicion: "Defensor"}
 , {nombre: "Vesco, Lucas", posicion: "Defensor"}
-, {nombre: "Arzura, JoaquÌn", posicion: "Volante"}
+, {nombre: "Arzura, Joaqu√≠n", posicion: "Volante"}
 , {nombre: "Blanco, Jonathan", posicion: "Volante"}
 , {nombre: "Carrasco, Nelson", posicion: "Volante"}
-, {nombre: "CastaÒo, Diego", posicion: "Volante"}
+, {nombre: "Casta√±o, Diego", posicion: "Volante"}
 , {nombre: "Ellacopulos, Emiliano", posicion: "Volante"}
 , {nombre: "Gelabert, Marcos", posicion: "Volante"}
 , {nombre: "Itabel, Kevin", posicion: "Volante"}
@@ -22,34 +22,34 @@ db.jugadores.save({equipo: "Tigre", jugadores: [{nombre: "Albil, Dami·n", posici
 , {nombre: "Leone, Ramiro", posicion: "Volante"}
 , {nombre: "Mejia, Jonathan", posicion: "Voalnte"}
 , {nombre: "Menossi, Lucas", posicion: "Volante"}
-, {nombre: "PeÒalba, Gabriel", posicion: "Volante"}
-, {nombre: "PÈrez GarcÌa, MatÌas", posicion: "Volante"}
+, {nombre: "Pe√±alba, Gabriel", posicion: "Volante"}
+, {nombre: "P√©rez Garc√≠a, Mat√≠as", posicion: "Volante"}
 , {nombre: "Pio, Ariel", posicion: " Volante"}
-, {nombre: "Rusculleda, Sebasti·n", posicion: "Volante"}
-, {nombre: "S·nchez, Facundo", posicion: "Volante"}
+, {nombre: "Rusculleda, Sebasti√°n", posicion: "Volante"}
+, {nombre: "S√°nchez, Facundo", posicion: "Volante"}
 , {nombre: "Wilches, Lucas", posicion: "Volante"}
 , {nombre: "Araujo, Sergio", posicion: "Delantero"}
 , {nombre: "Bordacahar, Cristian", posicion: "Delantero"}
-, {nombre: "LeguizamÛn, Leandro", posicion: "Delantero"}
-, {nombre: "Sand, JosÈ", posicion: "Delantero"}
+, {nombre: "Leguizam√≥n, Leandro", posicion: "Delantero"}
+, {nombre: "Sand, Jos√©", posicion: "Delantero"}
 , {nombre: "Vitti, Pablo", posicion: "Delantero"}
 ]});
 
 
-db.jugadores.save({equipo: "Boca", jugadores: [{nombre: "D\\'Angelo, Sebasti·n", posicion: "Arquero"}
-, {nombre: "Orion, AgustÌn", posicion: "Arquero"}
-, {nombre: "TrÌpodi, Emanuel", posicion: "Arquero"}
+db.jugadores.save({equipo: "Boca", jugadores: [{nombre: "D\\'Angelo, Sebasti√°n", posicion: "Arquero"}
+, {nombre: "Orion, Agust√≠n", posicion: "Arquero"}
+, {nombre: "Tr√≠podi, Emanuel", posicion: "Arquero"}
 , {nombre: "Vicentini, Manuel", posicion: "Arquero"}
 , {nombre: "Aguirre, Alan", posicion: "Defensor"}
 , {nombre: "Burdisso, Guillermo", posicion: "Defensor"}
-, {nombre: "Caruzzo, MatÌas", posicion: "Defensor"}
+, {nombre: "Caruzzo, Mat√≠as", posicion: "Defensor"}
 , {nombre: "Castagno, Dino", posicion: "Defensor"}
 , {nombre: "Castillo, Jonathan", posicion: "Defensor"}
-, {nombre: "DÌaz, Daniel", posicion: "Defensor"}
-, {nombre: "Ins˙a, Emanuel", posicion: "Defensor"}
-, {nombre: "MarÌn, Lucas", posicion: "Defensor"}
-, {nombre: "PÈrez, Claudio", posicion: "Defensor"}
-, {nombre: "Z·rate, Nahuel", posicion: "Defensor"}
+, {nombre: "D√≠az, Daniel", posicion: "Defensor"}
+, {nombre: "Ins√∫a, Emanuel", posicion: "Defensor"}
+, {nombre: "Mar√≠n, Lucas", posicion: "Defensor"}
+, {nombre: "P√©rez, Claudio", posicion: "Defensor"}
+, {nombre: "Z√°rate, Nahuel", posicion: "Defensor"}
 , {nombre: "Bravo, Federico", posicion: "Volante"}
 , {nombre: "Di Franco, Francisco", posicion: "Volante"}
 , {nombre: "Erbes, Cristian", posicion: "Volante"}
@@ -57,47 +57,47 @@ db.jugadores.save({equipo: "Boca", jugadores: [{nombre: "D\\'Angelo, Sebasti·n",
 , {nombre: "Ferreyra, Franco", posicion: "Volante"}
 , {nombre: "Gago, Fernando", posicion: "Volante"}
 , {nombre: "Ledesma, Pablo", posicion: "Volante"}
-, {nombre: "MÈndez, Jes˙s", posicion: "Volante"}
+, {nombre: "M√©ndez, Jes√∫s", posicion: "Volante"}
 , {nombre: "Paredes, Leandro", posicion: "Volante"}
-, {nombre: "Riquelme, Juan Rom·n", posicion: "Volante"}
-, {nombre: "RÌvero, Diego", posicion: "Volante"}
-, {nombre: "RodrÌguez, Ribair", posicion: "Volante"}
-, {nombre: "S·nchez MiÒo, Juan Manuel", posicion: "Volante"}
-, {nombre: "Vidal, Sebasti·n", posicion: "Volante"}
+, {nombre: "Riquelme, Juan Rom√°n", posicion: "Volante"}
+, {nombre: "R√≠vero, Diego", posicion: "Volante"}
+, {nombre: "Rodr√≠guez, Ribair", posicion: "Volante"}
+, {nombre: "S√°nchez Mi√±o, Juan Manuel", posicion: "Volante"}
+, {nombre: "Vidal, Sebasti√°n", posicion: "Volante"}
 , {nombre: "Acosta, Joel", posicion: "Delantero"}
-, {nombre: "Blandi, Nicol·s", posicion: "Delantero"}
-, {nombre: "C·ngele, Franco", posicion: "Delantero"}
+, {nombre: "Blandi, Nicol√°s", posicion: "Delantero"}
+, {nombre: "C√°ngele, Franco", posicion: "Delantero"}
 , {nombre: "Fragapane, Franco", posicion: "Delantero"}
 , {nombre: "Gigliotti, Emanuel", posicion: "Delantero"}
-, {nombre: "Mana, Nicol·s", posicion: "Delantero"}
-, {nombre: "MartÌnez, Juan Manuel", posicion: "Delantero"}
-, {nombre: "RiaÒo, Claudio", posicion: "Delantero"}
+, {nombre: "Mana, Nicol√°s", posicion: "Delantero"}
+, {nombre: "Mart√≠nez, Juan Manuel", posicion: "Delantero"}
+, {nombre: "Ria√±o, Claudio", posicion: "Delantero"}
 ]});
 
-db.jugadores.save({equipo:   "RÌver", jugadores: [{nombre: "Barovero, Marcelo", posicion: "Arquero"}
+db.jugadores.save({equipo:   "R√≠ver", jugadores: [{nombre: "Barovero, Marcelo", posicion: "Arquero"}
 , {nombre: "Chichizola, Leandro", posicion: "Arquero"}
-, {nombre: "RodrÌguez, Nicol·s", posicion: "Arquero"}
+, {nombre: "Rodr√≠guez, Nicol√°s", posicion: "Arquero"}
 , {nombre: "Alvarez Balanta, Eder", posicion: "Defensor"}
 , {nombre: "Bottinelli, Jonathan", posicion: "Defensor"}
 , {nombre: "Funes Mori, Ramiro", posicion: "Defensor"}
 , {nombre: "Maidana, Jonathan", posicion: "Defensor"}
 , {nombre: "Mercado, Gabriel", posicion: "Defensor"}
-, {nombre: "Pezzella, Germ·n", posicion: "Defensor"}
-, {nombre: "Aguirre, MartÌn", posicion: "Volante"}
+, {nombre: "Pezzella, Germ√°n", posicion: "Defensor"}
+, {nombre: "Aguirre, Mart√≠n", posicion: "Volante"}
 , {nombre: "Carbonero, Carlos", posicion: "Volante"}
 , {nombre: "Fabbro, Jonathan", posicion: "Volante"}
 , {nombre: "Ferreyra, Osmar", posicion: "Volante"}
-, {nombre: "GÛmez, Nicol·s", posicion: "Volante"}
+, {nombre: "G√≥mez, Nicol√°s", posicion: "Volante"}
 , {nombre: "Kranevitter, Claudio", posicion: "Volante"}
 , {nombre: "Lanzini, Manuel", posicion: "Volante"}
 , {nombre: "Ledesma, Cristian", posicion: "Volante"}
-, {nombre: "MartÌnez, Tom·s", posicion: "Volante"}
+, {nombre: "Mart√≠nez, Tom√°s", posicion: "Volante"}
 , {nombre: "Ponzio, Leonardo", posicion: "Volante"}
 , {nombre: "Rojas, Ariel", posicion: "Volante"}
 , {nombre: "Solari, Augusto", posicion: "Volante"}
 , {nombre: "Vangioni, Leonel", posicion: "Volante"}
 , {nombre: "Andrada,Federico", posicion: "Delantero"}
-, {nombre: "GutiÈrrez, TeÛfilo", posicion: "Delantero"}
+, {nombre: "Guti√©rrez, Te√≥filo", posicion: "Delantero"}
 , {nombre: "Kaprof, Juan Cruz", posicion: "Delantero"}
 , {nombre: "Mora, Rodrigo", posicion: "Delantero"}
 , {nombre: "Simeone, Giovanni", posicion: "Delantero"}
