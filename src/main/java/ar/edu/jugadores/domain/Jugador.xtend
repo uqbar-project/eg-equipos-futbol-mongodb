@@ -1,11 +1,13 @@
 package ar.edu.jugadores.domain
 
 import java.io.Serializable
+import org.eclipse.xtend.lib.annotations.Accessors
 
+@Accessors
 class Jugador implements Serializable {
 	
-	@Property String nombre
-	@Property String posicion
+	String nombre
+	String posicion
 	
 	new(String nombre, String posicion) {
 		this.nombre = nombre

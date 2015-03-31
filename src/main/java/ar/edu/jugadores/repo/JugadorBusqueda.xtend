@@ -1,12 +1,14 @@
 package ar.edu.jugadores.repo
 
 import ar.edu.jugadores.domain.Equipo
+import org.eclipse.xtend.lib.annotations.Accessors
 
+@Accessors
 class JugadorBusqueda {
 	
-	@Property Equipo equipo
-	@Property String nombreComienzaCon
-	@Property String posicion
+	Equipo equipo
+	String nombreComienzaCon
+	String posicion
 	
 	new() {
 		this(null)	
@@ -29,4 +31,5 @@ class JugadorBusqueda {
 		}
 		result		
 	}
+	
 }
