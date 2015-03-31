@@ -32,4 +32,8 @@ class JugadorBusqueda {
 		result		
 	}
 	
+	def getNombreEquipo() {
+		this.equipo.nombre
+	}
+	
 }
