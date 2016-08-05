@@ -14,8 +14,8 @@ Antes de correr los test, tenés que instalar una base de datos MongoDB y levant
 
 En la carpeta [scripts](scripts) vas a encontrar dos archivos:
 
-* "Script Jugadores.txt" para ejecutarlo en el shell de MongoDB (ejecutable mongo). Este script inserta datos de varios equipos de fútbol con sus jugadores.
-* "Queries Jugadores.txt" con queries de ejemplo para probar directamente en el shell.
+* [Script Jugadores](scripts/Script Jugadores.txt) para ejecutarlo en el shell de MongoDB (ejecutable mongo). Este script inserta datos de varios equipos de fútbol con sus jugadores.
+* [Queries Jugadores](scripts/Queries Jugadores.txt) con queries de ejemplo para probar directamente en el shell.
 
 ## Proyecto
 El proyecto base de Xtend está usando directamente el driver Java que provee MongoDB.
