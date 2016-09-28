@@ -22,12 +22,12 @@ Acá te mostramos cómo correr los scripts con [Robomongo](https://robomongo.org
 
 ![video](video/demo.gif)
 
-Luego sí, podés correr los tests del proyecto Xtend, que testea
+Luego sí, podés correr los tests del proyecto Xtend, que verifica
 
 * que Palermo no está en el plantel de Boca del juego de datos
 * que Riquelme sí está en el plantel de Boca del juego de datos
 * que hay dos jugadores que comienzan con "Casta" (Castagno de Tigre y Dino Castaño de Boca)
 
 ## Proyecto
-El proyecto base de Xtend está usando directamente el driver Java que provee MongoDB.
+El proyecto base de Xtend está usando directamente el [driver para Java que provee MongoDB](https://docs.mongodb.com/getting-started/java/client/).
 
