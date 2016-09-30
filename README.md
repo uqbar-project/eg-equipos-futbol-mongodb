@@ -1,7 +1,7 @@
 # Equipos de fútbol - Persistencia en MongoDB
 
 ## Objetivo
-Testea el mapeo de una [aplicación de planteles de equipos de fútbol](http://ddsutn.com.ar/material/guia-de-ejercicios/guia-modelado-datos/nosql_plantelesfutbol) con MongoDB. 
+Testea el mapeo de una [aplicación de planteles de equipos de fútbol](https://github.com/uqbar-project/eg-equipos-futbol-mongodb/wiki) con MongoDB. 
 
 ## Modelo
 La base de datos se estructura en un documento jerárquico:
