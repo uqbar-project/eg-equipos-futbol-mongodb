@@ -6,7 +6,8 @@ service:
 jdk:
   - oraclejdk8
 
-before_install:
+before_script:
+  - sleep 15
   - mongo < ./scripts/Script_Jugadores.js 
 
 script:
