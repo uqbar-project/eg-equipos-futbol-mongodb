@@ -7,7 +7,8 @@ jdk:
   - oraclejdk8
 
 before_script:
-  - sleep 20
+  - sleep 15
+  - mongo --version
   - mongo ./scripts/Script_Jugadores.js 
 
 script:
