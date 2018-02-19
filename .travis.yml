@@ -7,8 +7,8 @@ jdk:
   - oraclejdk8
 
 before_script:
-  - sleep 15
-  - mongo < ./scripts/Script_Jugadores.js 
+  - sleep 20
+  - mongo ./scripts/Script_Jugadores.js 
 
 script:
   - mvn -e -DTRAVIS_JOB_ID=$TRAVIS_JOB_ID clean install
