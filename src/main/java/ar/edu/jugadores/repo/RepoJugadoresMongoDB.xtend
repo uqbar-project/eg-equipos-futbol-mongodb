@@ -26,7 +26,7 @@ class RepoJugadoresMongoDB implements RepoJugadores {
 		var MongoCursor<Document> cursor = null
 
 		// 
-		if (jugadorBusqueda.equipo != null) {
+		if (jugadorBusqueda.equipo !== null) {
 			searchQuery.put("equipo", jugadorBusqueda.nombreEquipo)
 			cursor = tablaJugadores.find(searchQuery).iterator
 			while (cursor.hasNext) {
@@ -43,7 +43,7 @@ class RepoJugadoresMongoDB implements RepoJugadores {
 		}
 
 		val nombreComienzaCon = jugadorBusqueda.nombreComienzaCon
-		if (nombreComienzaCon != null) {
+		if (nombreComienzaCon !== null) {
 			val unwind = new BasicDBObject("$unwind", "$jugadores")
 			val casta = new BasicDBObject("$regex", nombreComienzaCon + ".*")
 			val match = new BasicDBObject("$match", new BasicDBObject("jugadores.nombre", casta))

@@ -20,13 +20,13 @@ class JugadorBusqueda {
 	
 	override toString() {
 		var result = "Busqueda de jugadores " 
-		if (posicion != null) {
+		if (posicion !== null) {
 			result += " - posicion " + posicion
 		}
-		if (equipo != null) {
+		if (equipo !== null) {
 			result += " - equipo " + equipo.nombre
 		}
-		if (nombreComienzaCon != null) {
+		if (nombreComienzaCon !== null) {
 			result += " - nombre comienza con " + nombreComienzaCon
 		}
 		result		
