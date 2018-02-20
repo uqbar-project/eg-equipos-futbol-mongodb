@@ -1,7 +1,6 @@
 language: java
 
-service:
-  - mongodb
+services: mongodb
 
 jdk:
   - oraclejdk8
