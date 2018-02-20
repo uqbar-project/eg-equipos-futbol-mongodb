@@ -28,6 +28,8 @@ Acá te mostramos cómo correr los scripts con [Robomongo](https://robomongo.org
 
 ![video](video/demo.gif)
 
+**Los scripts deberías ejecutarlos en la base de datos "test"**. Si elegís otra base tenés que modificar el string de conexión en la clase Xtend _RepoJugadoresMongoDB_.
+
 Luego sí, podés correr los tests del proyecto Xtend, que verifica
 
 * que Palermo no está en el plantel de Boca del juego de datos
