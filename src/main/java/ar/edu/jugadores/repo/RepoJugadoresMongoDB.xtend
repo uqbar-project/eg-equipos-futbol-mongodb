@@ -1,11 +1,13 @@
 package ar.edu.jugadores.repo
 
 import ar.edu.jugadores.domain.Jugador
-import com.mongodb.BasicDBObject
 import com.mongodb.MongoClient
+import com.mongodb.client.AggregateIterable
+import com.mongodb.client.MongoCollection
 import com.mongodb.client.MongoCursor
 import com.mongodb.client.MongoDatabase
 import java.util.ArrayList
+import java.util.Arrays
 import java.util.List
 import org.bson.Document
 
@@ -15,8 +17,8 @@ class RepoJugadoresMongoDB implements RepoJugadores {
 
 	new() {
 		val mongo = new MongoClient("localhost", 27017)
-		db = mongo.getDatabase("local")
-		println("Conectado a MongoDB. Bases: " + db.listCollectionNames)
+		db = mongo.getDatabase("test")
+		println("Conectado a MongoDB. Bases: " + db.listCollectionNames.toList)
 	}
 
 	override getJugadores(JugadorBusqueda jugadorBusqueda) {
@@ -25,14 +27,14 @@ class RepoJugadoresMongoDB implements RepoJugadores {
 		val searchQuery = new Document
 		var MongoCursor<Document> cursor = null
 
-		// 
+		//
 		if (jugadorBusqueda.equipo !== null) {
 			searchQuery.put("equipo", jugadorBusqueda.nombreEquipo)
 			cursor = tablaJugadores.find(searchQuery).iterator
 			while (cursor.hasNext) {
 				val equipoDB = cursor.next
 				val jugadoresDB = equipoDB.get("jugadores") as ArrayList<Document>
-				jugadoresDB.forEach  [ jugadorDB |
+				jugadoresDB.forEach [ jugadorDB |
 					val jugadorJSON = jugadorDB as Document
 					jugadores.add(getJugador(jugadorJSON))
 				]
@@ -44,27 +46,29 @@ class RepoJugadoresMongoDB implements RepoJugadores {
 
 		val nombreComienzaCon = jugadorBusqueda.nombreComienzaCon
 		if (nombreComienzaCon !== null) {
-			val unwind = new BasicDBObject("$unwind", "$jugadores")
-			val casta = new BasicDBObject("$regex", nombreComienzaCon + ".*")
-			val match = new BasicDBObject("$match", new BasicDBObject("jugadores.nombre", casta))
-			val cmdBody = new BasicDBObject("aggregate", "jugadores")
-			val pipeline = new ArrayList<BasicDBObject> => [
-				add(unwind)
-				add(match)
-			]
-			cmdBody.put("pipeline", pipeline)
-			val result = db.runCommand(cmdBody)
-			var jugadoresDB = result.get("result") as List<Document>
+			val MongoCollection<Document> collection = db.getCollection("jugadores")
+
+			val AggregateIterable<Document> jugadoresDB = collection.aggregate(Arrays.asList(
+				new Document("$unwind", "$jugadores"),
+				new Document("$match", new Document("jugadores.nombre", 
+						new Document("$regex", nombreComienzaCon + ".*")
+				)),
+				new Document("$limit", 200),
+				new Document("$project",
+					new Document("_id", 0).append("nombre", "$jugadores.nombre").append("posicion", "$jugadores.posicion"))
+			))
+
 			// El query que tira es distinto que el "por equipo"
-			jugadoresDB.forEach [ jugadorDB | 
-				var jugadorJSON = (jugadorDB as Document).get("jugadores") as Document
+			val cursorJugadores = jugadoresDB.iterator
+			while (cursorJugadores.hasNext) {
+				val jugadorJSON = cursorJugadores.next
 				jugadores.add(getJugador(jugadorJSON))
-			]
-			println("Jugadores DB: " + jugadoresDB)
+			}
+			println("Jugadores DB: " + jugadoresDB.size)
 			println(jugadorBusqueda)
 			println("Resultado: " + jugadores)
 			println("****************************************")
-		}
+ 		}
 		jugadores
 	}
 
