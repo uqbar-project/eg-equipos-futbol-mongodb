@@ -1,20 +1,20 @@
 -- Ver el documento que contiene los datos de Tigre
-> db.jugadores.find({equipo: 'Tigre'}).pretty();
+> db.equipos.find({equipo: 'Tigre'}).pretty();
 
 -- Ver los equipos cuyo nombre sea mayor a 'R'
-> db.jugadores.find({equipo: {'$gt': 'R'}}).pretty();
+> db.equipos.find({equipo: {'$gt': 'R'}}).pretty();
 
 -- Ver los equipos que tengan un jugador llamado Gigliotti, Emanuel
-> db.jugadores.find({'jugadores.nombre': 'Gigliotti, Emanuel'}).pretty();
+> db.equipos.find({'jugadores.nombre': 'Gigliotti, Emanuel'}).pretty();
 
 -- Ver los equipos Boca y Tigre
-> db.jugadores.find({equipo: { '$in': ['Boca Juniors', 'Tigre']}}).pretty();
+> db.equipos.find({equipo: { '$in': ['Boca Juniors', 'Tigre']}}).pretty();
 
 -- Actualizamos el nombre de un equipo 		
-> db.jugadores.update({ equipo: "Ríver"}, { $set: { equipo: "River Plate"} }, {upsert: false })
+> db.equipos.update({ equipo: "Ríver"}, { $set: { equipo: "River Plate"} }, {upsert: false })
 
 -- Buscamos los jugadores que empiecen con Casta
-> db.jugadores.aggregate([ 
+> db.equipos.aggregate([ 
           { $unwind: "$jugadores" }, 
           { $match: { "jugadores.nombre": {"$regex": "Casta.*"} } },
           { $sort: { nombre: -1 } }
@@ -22,12 +22,12 @@
 
 
 -- Ejemplo mapReduce para ver la cantidad de jugadores de cada equipo
-db.jugadores.mapReduce(
+db.equipos.mapReduce(
         function() { emit(this.equipo, this.jugadores.length) } , 
 	function(equipo, jugadores) { return jugadores; } ,
 	{ out: "jugadoresPorEquipo" });
 
-db.jugadoresPorEquipo.find().pretty();
+db.equiposPorEquipo.find().pretty();
 
 { "_id" : "Boca", "value" : 36 }
 { "_id" : "Ríver", "value" : 27 }
@@ -50,7 +50,7 @@ var sumar = function(letra, jugadores) {
 			         jugadores: jugadores};
                     };
                     
-db.jugadores.mapReduce(mapPrimeraLetra, sumar, { out: 'jugadoresPorLetra' });
+db.equipos.mapReduce(mapPrimeraLetra, sumar, { out: 'jugadoresPorLetra' });
 ...
         "_id" : "R",
         "value" : {

@@ -22,21 +22,20 @@ class RepoJugadoresMongoDB implements RepoJugadores {
 	}
 
 	override getJugadores(JugadorBusqueda jugadorBusqueda) {
-		val tablaJugadores = db.getCollection("jugadores")
-		val List<Jugador> jugadores = new ArrayList<Jugador>
+		val jugadores = new ArrayList<Jugador>
 		val searchQuery = new Document
 		var MongoCursor<Document> cursor = null
 
 		//
 		if (jugadorBusqueda.equipo !== null) {
 			searchQuery.put("equipo", jugadorBusqueda.nombreEquipo)
-			cursor = tablaJugadores.find(searchQuery).iterator
+			cursor = collectionEquipos.find(searchQuery).iterator
 			while (cursor.hasNext) {
 				val equipoDB = cursor.next
 				val jugadoresDB = equipoDB.get("jugadores") as ArrayList<Document>
 				jugadoresDB.forEach [ jugadorDB |
 					val jugadorJSON = jugadorDB as Document
-					jugadores.add(getJugador(jugadorJSON))
+					jugadores.add(jugadorJSON.jugador)
 				]
 			}
 			println(jugadorBusqueda)
@@ -46,9 +45,7 @@ class RepoJugadoresMongoDB implements RepoJugadores {
 
 		val nombreComienzaCon = jugadorBusqueda.nombreComienzaCon
 		if (nombreComienzaCon !== null) {
-			val MongoCollection<Document> collection = db.getCollection("jugadores")
-
-			val AggregateIterable<Document> jugadoresDB = collection.aggregate(Arrays.asList(
+			val AggregateIterable<Document> jugadoresDB = collectionEquipos.aggregate(Arrays.asList(
 				new Document("$unwind", "$jugadores"),
 				new Document("$match", new Document("jugadores.nombre", 
 						new Document("$regex", nombreComienzaCon + ".*")
@@ -61,8 +58,7 @@ class RepoJugadoresMongoDB implements RepoJugadores {
 			// El query que tira es distinto que el "por equipo"
 			val cursorJugadores = jugadoresDB.iterator
 			while (cursorJugadores.hasNext) {
-				val jugadorJSON = cursorJugadores.next
-				jugadores.add(getJugador(jugadorJSON))
+				jugadores.add(cursorJugadores.next.jugador)
 			}
 			println("Jugadores DB: " + jugadoresDB.size)
 			println(jugadorBusqueda)
@@ -70,6 +66,10 @@ class RepoJugadoresMongoDB implements RepoJugadores {
 			println("****************************************")
  		}
 		jugadores
+	}
+	
+	protected def MongoCollection<Document> getCollectionEquipos() {
+		db.getCollection("equipos")
 	}
 
 	def getJugador(Document jugadorJSON) {
