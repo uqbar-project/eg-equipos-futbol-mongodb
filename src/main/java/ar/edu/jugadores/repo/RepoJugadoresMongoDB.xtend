@@ -8,7 +8,6 @@ import com.mongodb.client.MongoCursor
 import com.mongodb.client.MongoDatabase
 import java.util.ArrayList
 import java.util.Arrays
-import java.util.List
 import org.bson.Document
 
 class RepoJugadoresMongoDB implements RepoJugadores {
