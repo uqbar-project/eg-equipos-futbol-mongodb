@@ -10,14 +10,6 @@ class JugadorBusqueda {
 	String nombreComienzaCon
 	String posicion
 	
-	new() {
-		this(null)	
-	}
-	
-	new(Equipo equipo) {
-		this.equipo = equipo
-	}
-	
 	override toString() {
 		var result = "Busqueda de jugadores " 
 		if (posicion !== null) {

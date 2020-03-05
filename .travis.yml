@@ -1,3 +1,4 @@
+dist: trusty
 language: java
 
 services: mongodb
@@ -7,7 +8,7 @@ jdk:
 
 before_script:
   - sleep 15
-  - mongo localhost:27017/test ./scripts/Script_Jugadores.js 
+  - mongo localhost:27017/local ./scripts/Script_Jugadores.js 
 
 script:
   - mvn -e -DTRAVIS_JOB_ID=$TRAVIS_JOB_ID clean install jacoco:report coveralls:report

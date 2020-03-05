@@ -1,19 +1,14 @@
 package ar.edu.jugadores.domain
 
 import java.io.Serializable
-import org.eclipse.xtend.lib.annotations.Accessors
+import org.eclipse.xtend.lib.annotations.Data
 
-@Accessors
+@Data
 class Jugador implements Serializable {
 	
 	String nombre
 	String posicion
 	
-	new(String nombre, String posicion) {
-		this.nombre = nombre
-		this.posicion = posicion
-	}
-
 	override toString() {
 		nombre
 	}	
