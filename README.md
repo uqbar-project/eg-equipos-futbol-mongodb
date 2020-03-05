@@ -1,6 +1,6 @@
 # Equipos de fútbol - Persistencia en MongoDB
 
-[![Build Status](https://travis-ci.org/uqbar-project/eg-equipos-futbol-mongodb.svg?branch=master)](https://travis-ci.org/uqbar-project/eg-equipos-futbol-mongodb) [![Coverage Status](https://coveralls.io/repos/github/uqbar-project/eg-equipos-futbol-mongodb/badge.svg?branch=master&service=github)](https://coveralls.io/github/uqbar-project/eg-equipos-futbol-mongodb?branch=master&service=github)
+[![Build Status](https://travis-ci.org/uqbar-project/eg-equipos-futbol-mongodb.svg?branch=master)](https://travis-ci.org/uqbar-project/eg-equipos-futbol-mongodb) [![Coverage Status](https://coveralls.io/repos/github/uqbar-project/eg-equipos-futbol-mongodb/badge.svg?branch=master&service=github)](https://coveralls.io/github/uqbar-project/eg-equipos-futbol-mongodb?branch=master&service=github&refresh=1)
 
 
 ## Objetivo
